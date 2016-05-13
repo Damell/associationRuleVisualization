@@ -1,17 +1,37 @@
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+====== Association Rules Visualization ======
+=== Goals ===
+  * Compute association rules from provided data
+  * __Visualize those rules in a non-standard way__
+  * Accessible as an online tool
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative](http://opensource.org/).
+=== Dataset and preprocessing ===
+  * data needs to be in CSV format
+  * datasets from http://repository.seasr.org/Datasets/UCI/csv/ can be used
+  * support only for nominal values and custom coded binomial values support; all other values are also handled as nominal
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+=== Association Rules Mining ===
+  * the Apriori algorithm used for rules mining
+  * open source Apriori Algorithm implementation in JavaScript used to run in NodeJS environment
 
-Finally, consider defining some sprints and work items in Track & Plan to give 
-interested developers a sense of your cadence and upcoming enhancements.
+=== Postprocessing ===
+  * the Apriori.js open source project only provides confidence for rules and support for item sets
+  * my custom postprocessing step computed support, lift and conviction for all rules
+
+=== Technologies ===
+  * IBM Bluemix - for cloud NodeJS environment
+  * Node-RED tool - for quick prototyping and visual data flow scaffolding
+  * D3.js - for creating visualizations in the browser
+  * Apriori.js - for extracting rules from a dataset
+
+=== Solution URLs ===
+  * UI - http://association-rules.eu-gb.mybluemix.net/ui/
+  * Node RED - http://association-rules.eu-gb.mybluemix.net/red/# 
+  * Presentation - https://docs.google.com/presentation/d/1nK3FydLWRTjP_7R4pVElk4-Mz3RkiRV60EyYw7cR-iY/pub?start=false&loop=false
+
+=== Sources ===
+  * https://console.ng.bluemix.net/
+  * http://nodered.org/
+  * https://d3js.org/
+  * https://github.com/seratch/apriori.js
+  * https://en.wikipedia.org/wiki/Association_rule_learning
+  * https://en.wikipedia.org/wiki/Apriori_algorithm
